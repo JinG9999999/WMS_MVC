@@ -131,8 +131,8 @@
                 obj.supplierLevel = parseInt($("#CarrierLevel").val());
                 obj.email = $("#Email").val();
                 obj.remark = $("#Remark").val();
-                obj.createBy = parseInt(1);
-                obj.modifiedBy = parseInt(1);
+                obj.createBy = $("#Login").text();
+                obj.modifiedBy = $("#Login").text();
 
 
 
@@ -231,7 +231,7 @@
                 obj.supplierLevel = parseInt($("#CarrierLevel1").val());
                 obj.email = $("#Email1").val();
                 obj.remark = $("#Remark1").val();
-                obj.modifiedBy = parseInt(1);
+                obj.modifiedBy = $("#Login").text();
                 obj.supplierId = parseInt(id)
 
 

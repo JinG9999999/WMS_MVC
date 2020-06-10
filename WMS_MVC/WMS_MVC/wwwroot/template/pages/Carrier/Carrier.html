@@ -27,6 +27,7 @@
 
         $(function () {
             Show(1);
+            $("#Login").text("zjl");
         });
 
         function Show(page) {
@@ -131,7 +132,7 @@
                 obj.CarrierLevel = parseInt($("#CarrierLevel").val());
                 obj.Email = $("#Email").val();
                 obj.Remark = $("#Remark").val();
-                obj.CreateBy = parseInt(1);
+                obj.ModifiedBy = $("#Login").text();
 
 
                 $.ajax({
@@ -229,7 +230,7 @@
                 obj.CarrierLevel = parseInt($("#CarrierLevel1").val());
                 obj.Email = $("#Email1").val();
                 obj.Remark = $("#Remark1").val();
-                obj.modifiedBy = parseInt(1);
+                obj.modifiedBy = $("#Login").text();
                 obj.carrierId = parseInt(id);
 
 
