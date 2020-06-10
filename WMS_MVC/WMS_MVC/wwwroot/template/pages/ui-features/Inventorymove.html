@@ -56,8 +56,9 @@
                             + '<td>' + this.inventorymoveId + '</td>'
                             + '<td>' + this.sourceStoragerackId + '</td>'
                             + '<td>' + this.aimStoragerackId + '</td>'
-                            + '<td>' + this.status + '</td>'
-                            + '<td>' + this.isDel + '</td>'
+                         
+                            + '<td>' + (this.status == 1 ? "已审核" : "初始") + '</td>'
+                            + '<td>' + (this.isdel == true ? "是" : "否") + '</td>'
                             + '<td>' + this.remark + '</td>'
                             + '<td>' + this.createBy + '</td>'
                             + '<td>' + this.createDate + '</td>'
@@ -441,7 +442,10 @@
         </tr>
         <tr>
             <td>是否删除</td>
-            <td><input id="isDel" type="text" /></td>
+            <td>
+                <input id="Radio1" type="radio" name="isDel" />是
+                <input id="Radio2" type="radio" name="isDel"/>否
+            </td>
         </tr>
         <tr>
             <td>备注</td>
@@ -461,7 +465,9 @@
         obj.sourceStoragerackId = parseInt($("#sourceStoragerackId").val());
         obj.aimStoragerackId = parseInt($("#aimStoragerackId").val());
         obj.status = parseInt($("#status").val());
-        obj.status = parseInt($("#isDel").val());
+        obj.isDel = Radio1.checked;
+        obj.createby = getCookie("username");
+        obj.modifiedby = getCookie("username");;
         obj.remark = $("#remark").val();
         $.ajax({
             url: 'http://localhost:63209/api/Inventorymove/Post',
