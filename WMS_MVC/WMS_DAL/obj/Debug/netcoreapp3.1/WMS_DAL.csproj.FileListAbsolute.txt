@@ -58,3 +58,15 @@ C:\Users\o\Desktop\实训二项目\Four\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcor
 C:\Users\o\Desktop\实训二项目\Four\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.csproj.CopyComplete
 C:\Users\o\Desktop\实训二项目\Four\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.dll
 C:\Users\o\Desktop\实训二项目\Four\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.pdb
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\bin\Debug\netcoreapp3.1\WMS_DAL.deps.json
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\bin\Debug\netcoreapp3.1\WMS_DAL.dll
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\bin\Debug\netcoreapp3.1\WMS_DAL.pdb
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\bin\Debug\netcoreapp3.1\WMS_Entity.dll
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\bin\Debug\netcoreapp3.1\WMS_Entity.pdb
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.csprojAssemblyReference.cache
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.csproj.CoreCompileInputs.cache
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.AssemblyInfoInputs.cache
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.AssemblyInfo.cs
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.csproj.CopyComplete
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.dll
+L:\实训二\仓库管理系统项目---4组mvc\WMS_MVC\WMS_MVC\WMS_DAL\obj\Debug\netcoreapp3.1\WMS_DAL.pdb
