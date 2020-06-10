@@ -149,7 +149,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="../../images/faces/face5.jpg" alt="profile" />
-                            <span class="nav-profile-name">Louis Barnett</span>
+                            <span id="Login">-</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
@@ -258,60 +258,60 @@
 
                 </ul>
             </nav>
-        
-        <!-- partial -->
-        <div class="main-panel">
-            <div class="content-wrapper">
 
-                <table class="table table-bordered table table-borderless">
-                    <thead>
-                        <tr style="text-align: center">
-                            <th>部门编号</th>
-                            <th>部门名称</th>
-                            <th>是否启用</th>
-                            <th>创建时间</th>
-                            <th>修改时间</th>
-                            <th>操作</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tb">
-                    </tbody>
-                </table>
-
-                <table class="table">
-                    <tr>
-                        <td style="text-align: center; vertical-align: middle; color: #000000;">总记录数<span id="TotalCount"></span>条</td>
-                        <td style="text-align: center; vertical-align: middle; color: #000000;">总共<span id="TotalPage"></span>页</td>
-                        <td style="text-align: center; vertical-align: middle; color: #000000;">当前第<span id="CurrentPage"></span>页</td>
-                        <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
-                            <input id="Button1" type="button" value="首页" onclick="Show(1)" class="btn btn-dark" />
-                        </td>
-                        <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
-                            <input type="button" value="◀" onclick="Show(currentPage - 1)" class="btn btn-dark" />
-                        </td>
-                        <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
-                            <input type="button" value="▶" onclick="Show(currentPage + 1)" class="btn btn-dark" />
-                        </td>
-                        <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
-                            <input type="button" value="尾页" onclick="Show(totalPage)" class="btn btn-dark" />
-                        </td>
-                    </tr>
-                </table>
-
-            </div>
-            <!-- content-wrapper ends -->
-            <!-- partial:../../partials/_footer.html -->
-            <footer class="footer">
-                <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
-                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
-                </div>
-            </footer>
             <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+
+                    <table class="table table-bordered table table-borderless">
+                        <thead>
+                            <tr style="text-align: center">
+                                <th>部门编号</th>
+                                <th>部门名称</th>
+                                <th>是否启用</th>
+                                <th>创建时间</th>
+                                <th>修改时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb">
+                        </tbody>
+                    </table>
+
+                    <table class="table">
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle; color: #000000;">总记录数<span id="TotalCount"></span>条</td>
+                            <td style="text-align: center; vertical-align: middle; color: #000000;">总共<span id="TotalPage"></span>页</td>
+                            <td style="text-align: center; vertical-align: middle; color: #000000;">当前第<span id="CurrentPage"></span>页</td>
+                            <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                                <input id="Button1" type="button" value="首页" onclick="Show(1)" class="btn btn-dark" />
+                            </td>
+                            <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                                <input type="button" value="◀" onclick="Show(currentPage - 1)" class="btn btn-dark" />
+                            </td>
+                            <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                                <input type="button" value="▶" onclick="Show(currentPage + 1)" class="btn btn-dark" />
+                            </td>
+                            <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                                <input type="button" value="尾页" onclick="Show(totalPage)" class="btn btn-dark" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
         </div>
-        <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
+        <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
@@ -420,3 +420,24 @@
 </body>
 
 </html>
+
+<script>
+    $(function () {
+        cookies();
+    })
+    function cookies() {
+        $("#Login").text(getCookie("username"))
+    }
+    function getCookie(username) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(username + "=")
+            if (c_start != -1) {
+                c_start = c_start + username.length + 1
+                c_end = document.cookie.indexOf(";", c_start)
+                if (c_end == -1) c_end = document.cookie.length
+                return unescape(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ""
+    }
+</script>

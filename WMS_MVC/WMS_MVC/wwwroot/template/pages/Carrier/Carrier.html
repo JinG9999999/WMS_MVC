@@ -304,8 +304,10 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo" /></a>
-                    <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo" href="../../index.html">
+                        <img src="../../images/logo.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="../../index.html">
+                        <img src="../../images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
@@ -337,8 +339,7 @@
                                     <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">
-                                        David Grey
+                                    <h6 class="ellipsis font-weight-normal">David Grey
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         The meeting is cancelled
@@ -350,8 +351,7 @@
                                     <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">
-                                        Tim Cook
+                                    <h6 class="ellipsis font-weight-normal">Tim Cook
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         New product launch
@@ -363,8 +363,7 @@
                                     <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">
-                                        Johnson
+                                    <h6 class="ellipsis font-weight-normal">Johnson
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         Upcoming board meeting
@@ -424,7 +423,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="../../images/faces/face5.jpg" alt="profile" />
-                            <span class="nav-profile-name">Louis Barnett</span>
+                            <span id="Login">-</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
@@ -536,7 +535,7 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <table class="table table-bordered table-borderless" style="background-color:azure">
+                    <table class="table table-bordered table-borderless" style="background-color: azure">
                         <tr>
                             <td>创建时间：<input id="time1" type="text" class="text-behance" onclick="WdatePicker()" /></td>
 
@@ -563,7 +562,8 @@
                             <td></td>
 
                             <td>承运商名称：<input id="name" type="text" class="text-behance" /></td>
-                            <td><input id="Button1" type="button" value="查询" onclick="Show(1)" class="btn btn-success" /></td>
+                            <td>
+                                <input id="Button1" type="button" value="查询" onclick="Show(1)" class="btn btn-success" /></td>
                         </tr>
                     </table>
                     <table class="table table-bordered table table-borderless">
@@ -586,7 +586,7 @@
                         </thead>
                         <tbody id="td"></tbody>
                     </table>
-                    <table class="table" style="background-color:antiquewhite">
+                    <table class="table" style="background-color: antiquewhite">
                         <tr>
                             <td style="text-align: center; vertical-align: middle; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">总记录数<span id="TotalCount"></span>条</td>
                             <td style="text-align: center; vertical-align: middle; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">总共<span id="TotalPage"></span>页</td>
@@ -637,31 +637,38 @@
                 <table class="table table-bordered">
                     <tr>
                         <td>承运商：</td>
-                        <td><input id="CarrierName" type="text" /></td>
+                        <td>
+                            <input id="CarrierName" type="text" /></td>
                     </tr>
                     <tr>
                         <td>地址：</td>
-                        <td><input id="Address" type="text" /></td>
+                        <td>
+                            <input id="Address" type="text" /></td>
                     </tr>
                     <tr>
                         <td>电话：</td>
-                        <td><input id="Tel" type="text" /></td>
+                        <td>
+                            <input id="Tel" type="text" /></td>
                     </tr>
                     <tr>
                         <td>联系人：</td>
-                        <td><input id="CarrierPerson" type="text" /></td>
+                        <td>
+                            <input id="CarrierPerson" type="text" /></td>
                     </tr>
                     <tr>
                         <td>级别：</td>
-                        <td><input id="CarrierLevel" type="text" /></td>
+                        <td>
+                            <input id="CarrierLevel" type="text" /></td>
                     </tr>
                     <tr>
                         <td>邮箱：</td>
-                        <td><input id="Email" type="text" /></td>
+                        <td>
+                            <input id="Email" type="text" /></td>
                     </tr>
                     <tr>
                         <td>备注：</td>
-                        <td><input id="Remark" type="text" /></td>
+                        <td>
+                            <input id="Remark" type="text" /></td>
                     </tr>
                 </table>
                 <div class="form-group">
@@ -684,31 +691,38 @@
                 <table class="table table-bordered">
                     <tr>
                         <td>承运商：</td>
-                        <td><input id="CarrierName1" type="text" /></td>
+                        <td>
+                            <input id="CarrierName1" type="text" /></td>
                     </tr>
                     <tr>
                         <td>地址：</td>
-                        <td><input id="Address1" type="text" /></td>
+                        <td>
+                            <input id="Address1" type="text" /></td>
                     </tr>
                     <tr>
                         <td>电话：</td>
-                        <td><input id="Tel1" type="text" /></td>
+                        <td>
+                            <input id="Tel1" type="text" /></td>
                     </tr>
                     <tr>
                         <td>联系人：</td>
-                        <td><input id="CarrierPerson1" type="text" /></td>
+                        <td>
+                            <input id="CarrierPerson1" type="text" /></td>
                     </tr>
                     <tr>
                         <td>级别：</td>
-                        <td><input id="CarrierLevel1" type="text" /></td>
+                        <td>
+                            <input id="CarrierLevel1" type="text" /></td>
                     </tr>
                     <tr>
                         <td>邮箱：</td>
-                        <td><input id="Email1" type="text" /></td>
+                        <td>
+                            <input id="Email1" type="text" /></td>
                     </tr>
                     <tr>
                         <td>备注：</td>
-                        <td><input id="Remark1" type="text" /></td>
+                        <td>
+                            <input id="Remark1" type="text" /></td>
                     </tr>
                 </table>
                 <div class="form-group">
@@ -723,3 +737,23 @@
 </body>
 
 </html>
+<script>
+    $(function () {
+        cookies();
+    })
+    function cookies() {
+        $("#Login").text(getCookie("username"))
+    }
+    function getCookie(username) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(username + "=")
+            if (c_start != -1) {
+                c_start = c_start + username.length + 1
+                c_end = document.cookie.indexOf(";", c_start)
+                if (c_end == -1) c_end = document.cookie.length
+                return unescape(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ""
+    }
+</script>
