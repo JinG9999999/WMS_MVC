@@ -303,7 +303,7 @@
                     </thead>
                     <tbody id="tb"></tbody>
                 </table>
-                <div style="float:left;margin-top:25px">
+                <!--<div style="float:left;margin-top:25px">
                     <span>总记录数<span id="TotalCount"></span>条</span>&nbsp;&nbsp;&nbsp;
                     <span>总共<span id="TotalPage"></span>页</span>&nbsp;&nbsp;&nbsp;
                     <span>当前第<span id="CurrentPage"></span>页</span>&nbsp;&nbsp;&nbsp;
@@ -330,7 +330,26 @@
                     <span><a href="javascript:;" onclick="Show(currentPage+1)">下一页</a></span>&nbsp;&nbsp;&nbsp;
                     <span><a href="javascript:;" onclick="Show(totalPage)">尾页</a></span>
                 </div>
-            </div>
+            </div>-->
+            <table class="table">
+                <tr>
+                    <td style="text-align: center; vertical-align: middle; color: #000000;">总记录数<span id="TotalCount"></span>条</td>
+                    <td style="text-align: center; vertical-align: middle; color: #000000;">总共<span id="TotalPage"></span>页</td>
+                    <td style="text-align: center; vertical-align: middle; color: #000000;">当前第<span id="CurrentPage"></span>页</td>
+                    <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                        <input id="Button1" type="button" value="首页" onclick="Show(1)" class="btn btn-dark" />
+                    </td>
+                    <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                        <input type="button" value="◀" onclick="Show(currentPage - 1)" class="btn btn-dark" />
+                    </td>
+                    <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                        <input type="button" value="▶" onclick="Show(currentPage + 1)" class="btn btn-dark" />
+                    </td>
+                    <td style="text-align: center; color: black; font-family: STXingkai; font-weight: bolder; font-size: larger">
+                        <input type="button" value="尾页" onclick="Show(totalPage)" class="btn btn-dark" />
+                    </td>
+                </tr>
+            </table>
             <!-- content-wrapper ends -->
             <!-- partial:../../partials/_footer.html -->
             <!--<footer class="footer">
@@ -417,11 +436,25 @@
                 }
             }
         }
+        //取用户名值
+        function getCookie(username) {
+            if (document.cookie.length > 0) {
+                c_start = document.cookie.indexOf(username + "=")
+                if (c_start != -1) {
+                    c_start = c_start + username.length + 1
+                    c_end = document.cookie.indexOf(";", c_start)
+                    if (c_end == -1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start, c_end))
+                }
+            }
+            return ""
+        }
         function Add() {
             var obj = {};
             obj.stockInType = $("#Select111111").val();
             obj.supplierId = parseInt($("#Select222222").val());
             obj.remark = $("#TextArea333333").val();
+            obj.createBy = getCookie("username");
             $.ajax({
                 url: 'http://localhost:63209/api/Stockins/Post',
                 type: 'Post',
@@ -491,7 +524,7 @@
         function Shenhe(id) {
             var obj = {};
             obj.id = parseInt(id);
-            obj.name = "张三";
+            obj.name = getCookie("username");
             $.ajax({
                 url: 'http://localhost:63209/api/RuKu/Puts',
                 type: 'Post',
@@ -578,6 +611,7 @@
             obj.storagerackId = parseInt($("#Select6").val());
             obj.remark = $("#TextArea3").val();
             obj.stockInId = parseInt(Id);
+            obj.createBy = getCookie("username");
             $.ajax({
                 url: 'http://localhost:63209/api/Stockindetails/Post',
                 type: 'Post',
