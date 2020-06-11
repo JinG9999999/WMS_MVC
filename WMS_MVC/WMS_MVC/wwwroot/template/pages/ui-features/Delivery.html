@@ -55,8 +55,8 @@
                     $(d.deliverys).each(function () {
                         var list = '<tr>'
                             + '<td>' + this.deliveryId + '</td>'
-                            + '<td>' + this.stockOutId + '</td>'
-                            + '<td>' + this.carrierId + '</td>'
+                            + '<td>' + this.stockOutType + '</td>'
+                            + '<td>' + this.carrierName + '</td>'
                             + '<td>' + this.remark + '</td>'
                             + '<td>' + this.createBy + '</td>'
                             + '<td>' + this.createDate + '</td>'
@@ -329,7 +329,7 @@
                         <thead>
                             <tr>
                                 <th>发货单号</th>
-                                <th>出库单号</th>
+                                <th>出库类型</th>
                                 <th>承运商</th>
                                 <th>备注</th>
                                 <th>创建者</th>

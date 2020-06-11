@@ -54,11 +54,11 @@
                         var list = '<tr>'
                            // + '<td>' + '<a href=javascript:;>添加明细</a>' + ' ' + '<a href=javascript:;>审核</a>' + '</td>'
                             + '<td>' + this.inventorymoveId + '</td>'
-                            + '<td>' + this.sourceStoragerackId + '</td>'
+                            + '<td>' + this.storageRackName + '</td>'
                             + '<td>' + this.aimStoragerackId + '</td>'
                          
                             + '<td>' + (this.status == 1 ? "已审核" : "初始") + '</td>'
-                            + '<td>' + (this.isdel == true ? "是" : "否") + '</td>'
+                            + '<td>' + (this.isDel == true ? "是" : "否") + '</td>'
                             + '<td>' + this.remark + '</td>'
                             + '<td>' + this.createBy + '</td>'
                             + '<td>' + this.createDate + '</td>'

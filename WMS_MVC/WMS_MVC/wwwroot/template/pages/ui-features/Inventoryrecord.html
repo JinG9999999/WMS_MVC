@@ -53,7 +53,7 @@
                     $(d.inventoryrecords).each(function () {
                         var list = '<tr>'
                             + '<td>' + this.inventoryrecordId + '</td>'
-                            + '<td>' + this.stockInDetailId + '</td>'
+                            + '<td>' + this.reservoirAreaName + '</td>'
                             + '<td>' + this.qty + '</td>'
                             + '<td>' + this.remark + '</td>'
                             + '<td>' + this.createBy + '</td>'
@@ -325,7 +325,7 @@
                         <thead>
                             <tr>
                                 <th>库存记录号</th>
-                                <th>库存详情号</th>
+                                <th>库存详情</th>
                                 <th>数量</th>
                                 <th>备注</th>
                                 <th>创建者</th>
