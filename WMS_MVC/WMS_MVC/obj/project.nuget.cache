@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l4uL8Lq2USMqFEGBf5dbsLsldUSzpxOIPoomTiZxecXy5ylGOeZypd/0VMCAaFtW9sNG8+63UhHk4vI1FW9DuA==",
+  "dgSpecHash": "m8gQCx3rtOI3CqzKMN2qM5DkkmRDgvfKdrN45PJU/mHgTuHKY4JWy8mEpzJIaVg8yz7VbHNJQxPJE9ukgQedtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\完整版\\WMS_MVC - 副本\\WMS_MVC\\WMS_MVC\\WMS_MVC.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\WMS仓库管理系统\\WMS_MVC - 副本\\WMS_MVC\\WMS_MVC\\WMS_MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

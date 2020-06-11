@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "flaRUYZy7mF8/tKlFl+p7Eg1LQCowoXOENhjMc/75v7hGYo67xNzlbiRreRqS+N3Y87fY6aHqrQ2LSsiFWINog==",
+  "dgSpecHash": "WZr/013KRNOXBWH+jo1fiPZDlT+HiCtAFFd81nXMnFwgkC8SPOZH20WbFNDxgA6MCJCyU/WIKnaS+zCBryLZ2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\完整版\\WMS_MVC - 副本\\WMS_MVC\\WMS_DAL\\WMS_DAL.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\WMS仓库管理系统\\WMS_MVC - 副本\\WMS_MVC\\WMS_DAL\\WMS_DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

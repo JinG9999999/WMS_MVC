@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ukt8ecolv9xTAqJw01gcRswuEDzQsfx9atrj406AGW5qCF94X31ROUgo8FUU24bII6OXzzRWGLGpHGxzLbVe9w==",
+  "dgSpecHash": "eTEjqlbUvKRpTm0YG0Ph3J2tu06tslujwNfTjbEP+2aDw45umaQZmYhYNg//J2AydV3csMhpGV2CxyaiJpr44g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\完整版\\WMS_MVC - 副本\\WMS_MVC\\WMS_Entity\\WMS_Entity.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\WMS仓库管理系统\\WMS_MVC - 副本\\WMS_MVC\\WMS_Entity\\WMS_Entity.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
