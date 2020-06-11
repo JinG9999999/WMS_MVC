@@ -275,12 +275,15 @@
                 alert('请选择一条数据');
                 return;
             }
-
+            var obj = {};
+            obj.customerId = parseInt(id);
+            obj.modifiedBy = $("#Login").text();
             $.ajax({
                 url: 'http://localhost:63209/api/Customer/' + id,
                 type: 'delete',
                 dataType: 'json',
                 contentType: 'application/json',
+                data: JSON.stringify(obj),
                 crossDomain: true,
                 success: function (d) {
                     if (d > 0) {
@@ -301,9 +304,11 @@
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
                     <a class="navbar-brand brand-logo" href="../../index.html">
-                        <img src="../../images/logo.svg" alt="logo" /></a>
+                        <img src="../../images/logo.svg" alt="logo" />
+                    </a>
                     <a class="navbar-brand brand-logo-mini" href="../../index.html">
-                        <img src="../../images/logo-mini.svg" alt="logo" /></a>
+                        <img src="../../images/logo-mini.svg" alt="logo" />
+                    </a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
@@ -335,7 +340,8 @@
                                     <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">David Grey
+                                    <h6 class="ellipsis font-weight-normal">
+                                        David Grey
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         The meeting is cancelled
@@ -347,7 +353,8 @@
                                     <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">Tim Cook
+                                    <h6 class="ellipsis font-weight-normal">
+                                        Tim Cook
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         New product launch
@@ -359,7 +366,8 @@
                                     <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">Johnson
+                                    <h6 class="ellipsis font-weight-normal">
+                                        Johnson
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         Upcoming board meeting
@@ -542,7 +550,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td><input id="Button1" type="button" class="btn btn-google" value="删除记录" data-toggle="modal" data-target="#DelCustomer" onclick="DelShow()" /> </td>
                         </tr>
                         <tr>
                             <td>
@@ -559,7 +567,8 @@
 
                             <td>客户名称：<input id="name" type="text" class="text-behance" /></td>
                             <td>
-                                <input id="Button1" type="button" value="查询" onclick="Show(1)" class="btn btn-success" /></td>
+                                <input id="Button1" type="button" value="查询" onclick="Show(1)" class="btn btn-success" />
+                            </td>
                         </tr>
                     </table>
                     <table class="table table-bordered table table-borderless">
@@ -630,37 +639,44 @@
                     <tr>
                         <td>客户：</td>
                         <td>
-                            <input id="CarrierName" type="text" /></td>
+                            <input id="CarrierName" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>地址：</td>
                         <td>
-                            <input id="Address" type="text" /></td>
+                            <input id="Address" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>电话：</td>
                         <td>
-                            <input id="Tel" type="text" /></td>
+                            <input id="Tel" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>联系人：</td>
                         <td>
-                            <input id="CarrierPerson" type="text" /></td>
+                            <input id="CarrierPerson" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>级别：</td>
                         <td>
-                            <input id="CarrierLevel" type="text" /></td>
+                            <input id="CarrierLevel" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>邮箱：</td>
                         <td>
-                            <input id="Email" type="text" /></td>
+                            <input id="Email" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>备注：</td>
                         <td>
-                            <input id="Remark" type="text" /></td>
+                            <input id="Remark" type="text" />
+                        </td>
                     </tr>
                 </table>
                 <div class="form-group">
@@ -684,37 +700,44 @@
                     <tr>
                         <td>客户名称：</td>
                         <td>
-                            <input id="CarrierName1" type="text" /></td>
+                            <input id="CarrierName1" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>地址：</td>
                         <td>
-                            <input id="Address1" type="text" /></td>
+                            <input id="Address1" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>电话：</td>
                         <td>
-                            <input id="Tel1" type="text" /></td>
+                            <input id="Tel1" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>联系人：</td>
                         <td>
-                            <input id="CarrierPerson1" type="text" /></td>
+                            <input id="CarrierPerson1" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>级别：</td>
                         <td>
-                            <input id="CarrierLevel1" type="text" /></td>
+                            <input id="CarrierLevel1" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>邮箱：</td>
                         <td>
-                            <input id="Email1" type="text" /></td>
+                            <input id="Email1" type="text" />
+                        </td>
                     </tr>
                     <tr>
                         <td>备注：</td>
                         <td>
-                            <input id="Remark1" type="text" /></td>
+                            <input id="Remark1" type="text" />
+                        </td>
                     </tr>
                 </table>
                 <div class="form-group">
@@ -726,7 +749,102 @@
         </div>
     </div>
     <!--反填+修改-->
-
+    <!--删除记录-->
+    <div class="modal fade" id="PutCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" id="Close1">
+            <div class="modal-content" id="Close2">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">修改客户</h4>
+                </div>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>客户名称：</td>
+                        <td>
+                            <input id="CarrierName1" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>地址：</td>
+                        <td>
+                            <input id="Address1" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电话：</td>
+                        <td>
+                            <input id="Tel1" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>联系人：</td>
+                        <td>
+                            <input id="CarrierPerson1" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>级别：</td>
+                        <td>
+                            <input id="CarrierLevel1" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>邮箱：</td>
+                        <td>
+                            <input id="Email1" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>备注：</td>
+                        <td>
+                            <input id="Remark1" type="text" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="Clear()">关闭✘</button>
+                    <button type="button" class="btn btn-primary" id="rcbtn" onclick="PutCustomer()">修改✎</button>
+                    <button type="button" class="btn btn-danger" id="rcbtn" onclick="Clear()">清空✘</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--反填+修改  
+        <!--删除记录-->
+    <div class="modal fade" id="DelCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" id="Close1" style="align-self:center; float:left;margin-left:150px">
+            <div class="modal-content" id="Close2" style="width:1500px;align-items:center;float:left">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">客户删除记录</h4>
+                </div>
+                <table class="table table-bordered table table-borderless">
+                    <thead>
+                        <tr>
+                           
+                            <th>客户编号</th>
+                            <th>客户名称</th>
+                            <th>电话</th>
+                            <th>邮箱</th>
+                            <th>联系人</th>
+                            <th>等级</th>
+                            <th>地址</th>
+                            <th>备注</th>
+                            <th>创建人</th>
+                            <th>创建时间</th>
+                            <th>修改人</th>
+                            <th>修改时间</th>
+                        </tr>
+                    </thead>
+                    <tbody id="td1"></tbody>
+                </table>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="Clear()">关闭✘</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--删除记录-->
 </body>
 
 </html>
@@ -749,5 +867,41 @@
             }
         }
         return ""
+    }
+
+    //删除记录
+    function DelShow() {
+    
+        $.ajax({
+            url: 'http://localhost:63209/api/CustomerDel',
+            type: 'get',
+            dataType: 'json',
+            contentType: 'application/json',
+    
+            crossDomain: true,
+            success: function (d) {
+             
+
+                $("#td1").empty();
+                $(d).each(function () {
+                    var list = '<tr>'
+                        + '<td>' + this.customerId + '</td>'
+                        + '<td>' + this.customerName + '</td>'
+                        + '<td>' + this.tel + '</td>'
+                        + '<td>' + this.email + '</td>'
+                        + '<td>' + this.carrierPerson + '</td>'
+                        + '<td>' + this.carrierLevel + '</td>'
+                        + '<td>' + this.address + '</td>'
+                        + '<td>' + this.remark + '</td>'
+                        + '<td>' + this.createBy + '</td>'
+                        + '<td>' + this.createDate + '</td>'
+                        + '<td>' + this.modifiedBy + '</td>'
+                        + '<td>' + this.modifiedDate + '</td>'
+                        + '</tr>'
+                    $("#td1").append(list);
+                })
+            }
+        })
+      
     }
 </script>
