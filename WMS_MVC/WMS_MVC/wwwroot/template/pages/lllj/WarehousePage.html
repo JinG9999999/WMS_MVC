@@ -36,8 +36,10 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo" /></a>
-                    <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo" href="../../index.html">
+                        <img src="../../images/logo.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="../../index.html">
+                        <img src="../../images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
@@ -69,8 +71,7 @@
                                     <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">
-                                        David Grey
+                                    <h6 class="ellipsis font-weight-normal">David Grey
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         The meeting is cancelled
@@ -82,8 +83,7 @@
                                     <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">
-                                        Tim Cook
+                                    <h6 class="ellipsis font-weight-normal">Tim Cook
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         New product launch
@@ -95,8 +95,7 @@
                                     <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
-                                    <h6 class="ellipsis font-weight-normal">
-                                        Johnson
+                                    <h6 class="ellipsis font-weight-normal">Johnson
                                     </h6>
                                     <p class="font-weight-light small-text text-muted mb-0">
                                         Upcoming board meeting
@@ -156,7 +155,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="../../images/faces/face5.jpg" alt="profile" />
-                            <span class="nav-profile-name">Louis Barnett</span>
+                            <span id="Login">-</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
@@ -280,15 +279,17 @@
                             <td>仓库名称：<input id="names" type="text" /></td>
 
 
-                            <td><input id="Button1" type="button" value="查询" onclick="Show(1)" class="btn btn-success" /></td>
+                            <td>
+                                <input id="Button1" type="button" value="查询" onclick="Show(1)" class="btn btn-success" /></td>
 
 
                         </tr>
                     </table>
                     <table class="table table-bordered  table table-borderless">
-                        <thead style="background-color:pink">
+                        <thead style="background-color: pink">
                             <tr>
-                                <th><input class="top" type="checkbox" onclick="allSelect()" />全选/反选</th>
+                                <th>
+                                    <input class="top" type="checkbox" onclick="allSelect()" />全选/反选</th>
                                 <th style="text-align: center;">操作</th>
                                 <th style="text-align: center;">仓库编号</th>
                                 <th style="text-align: center;">仓库名称</th>
@@ -392,7 +393,7 @@
                                 <input type="text" class="form-control" id="rName2" placeholder="仓库名称">
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">备注</label>
                             <div class="col-sm-9">
@@ -492,7 +493,7 @@
     function del(id) {
         if (confirm("确认删除吗？")) {
             $.ajax({
-                url: 'http://localhost:63209/api/Warehouse/DeleteWarehouse/'+id,
+                url: 'http://localhost:63209/api/Warehouse/DeleteWarehouse/' + id,
                 type: 'delete',
                 dataType: 'json',
                 data: JSON.stringify({ storageRackId: id }),
@@ -645,8 +646,27 @@
             }
         })
     }
-</script> 
+</script>
 
-
+<script>
+    $(function () {
+        cookies();
+    })
+    function cookies() {
+        $("#Login").text(getCookie("username"))
+    }
+    function getCookie(username) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(username + "=")
+            if (c_start != -1) {
+                c_start = c_start + username.length + 1
+                c_end = document.cookie.indexOf(";", c_start)
+                if (c_end == -1) c_end = document.cookie.length
+                return unescape(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ""
+    }
+</script>
 
 

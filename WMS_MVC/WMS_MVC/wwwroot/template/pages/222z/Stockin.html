@@ -142,7 +142,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="../../images/faces/face5.jpg" alt="profile" />
-                            <span class="nav-profile-name">Louis Barnett</span>
+                            <span id="Login">-</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
@@ -272,12 +272,8 @@
                         </td>
                         <td>
                             <select id="Select2">
-                                <option value=0>全部状态</option>
-                                <option value=1>待审核</option>
-                                <option value=2>审核未通过</option>
-                                <option value=3>审核通过</option>
-                                <option value=4>审核中</option>
-                                <option value=5>已发货</option>
+                                <option value=0>初始</option>
+                                <option value=1>已审核</option>
                             </select>
                         </td>
                         <td><input id="Button1" type="button" value="查询" class="btn btn-info" onclick="Show(1)" /></td>
@@ -382,12 +378,25 @@
         $(function () {
             Show(1);
         })
+        function timeFormatter(value) {
+
+            var da = new Date(parseInt(value.replace("/Date(", "").replace(")/", "").split("+")[0]));
+
+            return da.getFullYear() + "-" + (da.getMonth() + 1) + "-" + da.getDate() + " " + da.getHours() + ":" + da.getMinutes() + ":" + da.getSeconds();
+
+        }
         //显示
         function Show(page) {
+            var obj = {};
+            obj.createDate = $("#Texttime1").val();
+            obj.modifiedDate = $("#Textrime2").val();
+            obj.stockInType = $("#Select1").val();
+            obj.stockInStatus = parseInt($("#Select2").val());
+            
             $.ajax({
                 url: "http://localhost:63209/api/Stockins/Gets",
-                type: "Get",
-                data: { time1: $("#Texttime1").val(), time2: $("#Textrime2").val(), type: $("#Select1").val(), state: $("#Select2").val(), CurrentPage: page, },
+                type: "Post",
+                data: JSON.stringify(obj),
                 contentType: "application/json",
                 success: function (d) {
                     $("#TotalCount").text(d.totalCount)
@@ -530,7 +539,6 @@
                 type: 'Post',
                 data: JSON.stringify(obj),
                 contentType: "application/json",
-                crossDomain: true,
                 success: function (date) {
                     if (date == 1) {
                         alert("审核成功");
@@ -873,7 +881,26 @@
         </div>
     </div>
 </body>
-
+<script>
+    $(function () {
+        cookies();
+    })
+    function cookies() {
+        $("#Login").text(getCookie("username"))
+    }
+    function getCookie(username) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(username + "=")
+            if (c_start != -1) {
+                c_start = c_start + username.length + 1
+                c_end = document.cookie.indexOf(";", c_start)
+                if (c_end == -1) c_end = document.cookie.length
+                return unescape(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ""
+    }
+    </script>
 </html>
 <style>
     .black_overlay {
